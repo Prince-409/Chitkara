@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upcoming Events | Solo & Group</title>
+  <style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+    background: linear-gradient(-45deg, #d3d3d3, #a9a9a9, #808080);
+    animation: gradientMove 5s ease-in-out infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+footer {
+    margin-top: 40px;
+    font-size:20px;
+}
+.music-footer {
+    background-color: #1f3438;
+    color: white;
+    padding: 50px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-about {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-about h2 {
+    margin-bottom: 15px;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.footer-about p {
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-links h3 {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-social h3 {
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    background: white;
+    color: #1f3438;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #f6f4ef;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+.modern-header{
+    background: #1f3438;
+    padding: 20px 0 10px;
+    padding-top:5px;
+}
+
+/* Center Title */
+.club-title{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Bar container */
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 40px;
+}
+
+/* Navigation */
+.modern-nav{
+    display: flex;
+    gap: 35px;
+}
+
+/* Nav items */
+.nav-item{
+    position: relative;
+}
+
+.nav-item > a{
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+/* Dropdown Menu */
+.dropdown{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: #fff;
+    min-width: 170px;
+    border-radius: 10px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+}
+
+.dropdown a{
+    display: block;
+    padding: 12px 16px;
+    color: #1f3438;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown a:hover{
+    background: #f6f4ef;
+}
+
+/* Show on hover */
+.nav-item:hover .dropdown{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Underline Animation */
+.nav-item > a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f6f4ef;
+    transition: 0.3s;
+}
+
+.nav-item:hover > a::after{
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 800px){
+    .modern-nav{
+        display: none;
+    }
+}
+
+
+.events-wrapper {
+  padding: 60px 8%;
+}
+
+.events-title {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+.events-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.event-card {
+  width: 330px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  transition: 0.4s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-12px) scale(1.02);
+}
+
+.event-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.event-content {
+  padding: 20px;
+}
+
+.event-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.solo .event-tag {
+  background: #ff6a00;
+}
+
+.group .event-tag {
+  background: #00c3ff;
+}
+
+.event-content h2 {
+  margin: 10px 0 8px;
+}
+
+.event-date {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.event-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 12px 0 20px;
+}
+
+.event-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  background: linear-gradient(45deg, #ff6a00, #ffb347);
+  color: #000;
+  font-weight: bold;
+}
+
+.event-btn:hover {
+  opacity: 0.8;
+}
+
+@media(max-width: 768px) {
+  .events-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+```
+
+---
+
+If you want this page connected to your navigation or styled even closer to your existing site, tell me and I will fine-tune it 👌
+
+  </style>
+</head>
+<body>
+<header class="modern-header">
+
+    <h1 class="club-title"> <i class="fa-solid fa-music"></i> Soft Tune Club</h1>
+
+    <div class="nav-bar">
+
+        <nav class="modern-nav">
+
+            <div class="nav-item">
+                <a href="home.html">Home</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="about.html">About</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="events.html">Events</a>
+                <div class="dropdown">
+                    <a href="sevent.html">Solo</a>
+                    <a href="gevent.html">Group</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="gallery.html">Gallery</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="members.html">Members</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="contact.html">Contact</a>
+                <div class="dropdown">
+                    <a href="#">Email</a>
+                    <a href="#">Phone</a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+</header>
+  <section class="events-wrapper">
+    <h1 class="events-title">Upcoming Events</h1>
+
+    <div class="events-container">
+
+      <!-- GROUP EVENT -->
+      <div class="event-card group">
+        <div class="event-image">
+          <img src="Images/audiencemoment.jpg" alt=" ">
+        </div>
+        <div class="event-content">
+          <span class="event-tag">Group Event</span>
+          <h2>Live Band Ensemble</h2>
+          <p class="event-date">📅 05 September 2025</p>
+          <p class="event-desc">
+            An energetic group performance showcasing harmony, rhythm, and collaboration by our talented musicians.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+<footer class="music-footer">
+    <div class="footer-container">
+
+        <div class="footer-about">
+            <h2>Soft Tune Club</h2>
+            <p>
+                A fictional college music club where rhythm meets passion.
+                Explore instruments, performances and creativity.
+            </p>
+            <p>
+                Where words fail music speaks
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="members.html">Members</a>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <h5>Prince Raj</h5>
+            <div class="social-icons">
+    <a href="https://www.instagram.com/prince_raj_025/" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://github.com" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://twitter.com" target="_blank" title="Twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+</div>
+
+            <h5>Pulkit Dhiman</h5>
+            <div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://github.com" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://twitter.com" target="_blank" title="Twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+</div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p> Soft Tune Club | Made with <i class="fas fa-heart"></i> by Prince and Pulkit </p>
+    </div>
+</footer>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</body>
+</html>

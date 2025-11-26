@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Soft Tune Club</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+.contact-container {
+    background-color:grey; /* Slightly lighter dark background for container */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px black; /* Initial glow effect */
+    text-align: center;
+    max-width: 700px;
+    width: 90%;
+    margin:70px auto;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.5s ease-in-out; /* Smooth transition for glow */
+}
+
+.contact-container:hover {
+    box-shadow: 0 0 50px black, 0 0 80px black; /* Enhanced glow on hover */
+}
+
+.glow-text {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px white; /* Text glow */
+    animation: pulse 2s infinite alternate; /* Pulsing text animation */
+}
+
+@keyframes pulse {
+    from {
+        text-shadow: 0 0 10px brown;
+    }
+    to {
+        text-shadow: 0 0 50px brown;
+    }
+}
+
+.form-wrapper {
+    position: relative;
+    z-index: 1; /* Ensure form is above any background animations */
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Form entry animation */
+}
+
+.contact-container:hover .form-wrapper {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 480px; /* Adjust height as needed for your form */
+    background-color: transparent; /* Ensure iframe background matches theme */
+}
+
+/* Optional: Add a subtle background animation */
+.contact-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,255,255,0.1) 0%, transparent 70%);
+    animation: rotateBackground 15s linear infinite;
+    z-index: 0;
+}
+
+@keyframes rotateBackground {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+</style>
+</head>
+<body>
+
+<header class="modern-header">
+
+    <h1 class="club-title"> <i class="fa-solid fa-music"></i> Soft Tune Club</h1>
+
+    <div class="nav-bar">
+
+        <nav class="modern-nav">
+
+            <div class="nav-item">
+                <a href="home.html">Home</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="about.html">About</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="events.html">Events</a>
+                <div class="dropdown">
+                    <a href="#">Solo</a>
+                    <a href="#">Group</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="gallery.html">Gallery</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="members.html">Members</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="contact.html">Contact</a>
+                <div class="dropdown">
+                    <a href="#">Email</a>
+                    <a href="#">Phone</a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <img src="Images/hero.jpg" alt="Hero Image">
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contact-container">
+        <h2 class="glow-text">Get in Touch</h2>
+        <div class="form-wrapper">
+            <!-- Embed your Google Form here -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfvS-Xf8q1kOyrVPpTNrXLHKJGEnx8adBvbF3Qok9fq1DruYg/viewform?embedded=true" width="640" height="853" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </div>
+</body>
+</html>
+<footer class="music-footer">
+    <div class="footer-container">
+
+        <div class="footer-about">
+            <h2>Soft Tune Club</h2>
+            <p>
+                A fictional college music club where rhythm meets passion.
+                Explore instruments, performances and creativity.
+            </p>
+            <p>
+                Where words fail music speaks
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="members.html">Members</a>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <h5>Prince Raj</h5>
+            <div class="social-icons">
+    <a href="https://www.instagram.com/prince_raj_025/" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://github.com" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://twitter.com" target="_blank" title="Twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+</div>
+
+            <h5>Pulkit Dhiman</h5>
+            <div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://github.com" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://twitter.com" target="_blank" title="Twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+</div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p> Soft Tune Club | Made with <i class="fas fa-heart"></i> by Prince and Pulkit </p>
+    </div>
+</footer>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</body>
+</html>
