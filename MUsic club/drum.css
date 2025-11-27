@@ -292,5 +292,80 @@ footer {
     margin-top: 40px;
 }
 
+/* ===================== MOBILE RESPONSIVE FIX ===================== */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .club-title {
+    font-size: 24px;
+  }
+
+  .nav-bar {
+    padding: 10px;
+  }
+
+  /* HERO */
+  .hero img {
+    height: auto;
+  }
+
+  /* SECTION TEXT */
+  .section-subtitle {
+    width: 95%;
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .container {
+    width: 95%;
+    margin: 20px auto;
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  /* DRUM GRID FIX */
+  .grid1 {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 10px;
+  }
+
+  .grid-item {
+    width: 100%;
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .grid-item h3 {
+    font-size: 16px;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    width: 95%;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-social {
+    min-width: 100%;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+  @media (max-width: 768px){
+  .grid-item {
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+}
+
+}
 
 
