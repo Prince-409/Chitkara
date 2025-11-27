@@ -13,42 +13,48 @@
     <h1 class="club-title"> <i class="fa-solid fa-music"></i> Soft Tune Club</h1>
 
     <div class="nav-bar">
+    <!-- Hamburger Button -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-        <nav class="modern-nav">
+    <nav class="modern-nav" id="mobileNav">
 
-            <div class="nav-item">
-                <a href="home.html">Home</a>
-            </div>
+      <div class="nav-item">
+        <a href="home.html">Home</a>
+      </div>
 
-            <div class="nav-item">
-                <a href="about.html">About</a>
-            </div>
+      <div class="nav-item">
+        <a href="about.html">About</a>
+      </div>
 
-            <div class="nav-item">
-                <a href="events.html">Events</a>
-                <div class="dropdown">
-                    <a href="sevent.html">Solo</a>
-                    <a href="gevent.html">Group</a>
-                </div>
-            </div>
+      <div class="nav-item">
+        <a href="events.html">Events</a>
+        <div class="dropdown">
+          <a href="sevent.html">Solo</a>
+          <a href="gevent.html">Group</a>
+        </div>
+      </div>
 
-            <div class="nav-item">
-                <a href="gallery.html">Gallery</a>
-            </div>
+      <div class="nav-item">
+        <a href="gallery.html">Gallery</a>
+      </div>
 
-            <div class="nav-item">
-                <a href="members.html">Members</a>
-            </div>
+      <div class="nav-item">
+        <a href="members.html">Members</a>
+      </div>
 
-            <div class="nav-item">
-                <a href="contact.html">Contact</a>
-                <div class="dropdown">
-                    <a href="#">Email</a>
-                    <a href="#">Phone</a>
-                </div>
-            </div>
+      <div class="nav-item">
+        <a href="contact.html">Contact</a>
+        <div class="dropdown">
+          <a href="#">Email</a>
+          <a href="#">Phone</a>
+        </div>
+      </div>
 
-        </nav>
+    </nav>
     </div>
 </header>
 <div class="hero">
@@ -138,6 +144,23 @@
 
 <!-- Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script>
+function toggleMenu() {
+  const nav = document.getElementById("mobileNav");
+  const burger = document.querySelector(".hamburger");
+  nav.classList.toggle("show");
+  burger.classList.toggle("active");
+}
+
+// Optional: Close menu on link click
+document.querySelectorAll("#mobileNav a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("mobileNav").classList.remove("show");
+    document.querySelector(".hamburger").classList.remove("active");
+  });
+});
+</script>
 
 </body>
 </html>
