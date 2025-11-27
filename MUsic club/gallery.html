@@ -5,6 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Soft Tune Club</title>
     <link rel="stylesheet" href="style.css">
+<style>
+.modern-gallery-section {
+    width: 90%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #1f3438;
+    letter-spacing: 1px;
+}
+
+.gallery-subtitle {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+/* Grid */
+.modern-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+}
+
+/* Card */
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+/* Image */
+.gallery-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Overlay */
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(31,52,56,0.9), rgba(0,0,0,0.1));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.gallery-overlay h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.gallery-overlay span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Hover Effects */
+.gallery-card:hover img {
+    transform: scale(1.12);
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .gallery-title {
+        font-size: 28px;
+    }
+}
+</style>
 </head>
 <body>
 
@@ -69,10 +153,17 @@
         A glimpse of our performances, rehearsals and unforgettable stages.
     </p>
 
+    <main class="modern-gallery-section">
+
+    <h2 class="gallery-title">Our Musical Moments</h2>
+    <p class="gallery-subtitle">
+        A glimpse of our performances, rehearsals and unforgettable stages.
+    </p>
+
     <div class="modern-gallery-grid">
 
         <div class="gallery-card">
-            <img src="Images/i1.jpg" alt="Music Event">
+            <img src="Images/audiencemoment.jpg" alt="Music Event">
             <div class="gallery-overlay">
                 <h3>Live Performance</h3>
                 <span>Harmony Night</span>
@@ -88,7 +179,7 @@
         </div>
 
         <div class="gallery-card">
-            <img src="Images/stageshow.jpg" alt="Music Event">
+            <img src="Images/instrumentjamming.jpg" alt="Music Event">
             <div class="gallery-overlay">
                 <h3>Stage Show</h3>
                 <span>Annual Fest</span>
@@ -96,7 +187,7 @@
         </div>
 
         <div class="gallery-card">
-            <img src="Images/instrumentjamming.jpg" alt="Music Event">
+            <img src="Images/soloperformance.jpg" alt="Music Event">
             <div class="gallery-overlay">
                 <h3>Instrument Jam</h3>
                 <span>Open Mic</span>
@@ -104,7 +195,7 @@
         </div>
 
         <div class="gallery-card">
-            <img src="Images/soloperformance.jpg" alt="Music Event">
+            <img src="Images/stageshow.jpg" alt="Music Event">
             <div class="gallery-overlay">
                 <h3>Solo Performance</h3>
                 <span>Acoustic Night</span>
@@ -112,14 +203,14 @@
         </div>
 
         <div class="gallery-card">
-            <img src="Images/audiencemoment.jpg" alt="Music Event">
+            <img src="Images/i1.jpg" alt="Music Event">
             <div class="gallery-overlay">
                 <h3>Audience Moments</h3>
                 <span>Live Crowd</span>
             </div>
         </div>
-        <div class="gallery-card">
-            <img src="Images/i1.jpg" alt="Music Event">
+       <div class="gallery-card">
+            <img src="Images/audiencemoment.jpg" alt="Music Event">
             <div class="gallery-overlay">
                 <h3>Live Performance</h3>
                 <span>Harmony Night</span>
@@ -135,7 +226,7 @@
         </div>
 
         <div class="gallery-card">
-            <img src="Images/stageshow.jpg" alt="Music Event">
+            <img src="Images/instrumentjamming.jpg" alt="Music Event">
             <div class="gallery-overlay">
                 <h3>Stage Show</h3>
                 <span>Annual Fest</span>
@@ -143,7 +234,7 @@
         </div>
 
         <div class="gallery-card">
-            <img src="Images/instrumentjamming.jpg" alt="Music Event">
+            <img src="Images/soloperformance.jpg" alt="Music Event">
             <div class="gallery-overlay">
                 <h3>Instrument Jam</h3>
                 <span>Open Mic</span>
@@ -151,7 +242,7 @@
         </div>
 
         <div class="gallery-card">
-            <img src="Images/soloperformance.jpg" alt="Music Event">
+            <img src="Images/stageshow.jpg" alt="Music Event">
             <div class="gallery-overlay">
                 <h3>Solo Performance</h3>
                 <span>Acoustic Night</span>
@@ -159,7 +250,7 @@
         </div>
 
         <div class="gallery-card">
-            <img src="Images/audiencemoment.jpg" alt="Music Event">
+            <img src="Images/i1.jpg" alt="Music Event">
             <div class="gallery-overlay">
                 <h3>Audience Moments</h3>
                 <span>Live Crowd</span>
@@ -168,6 +259,7 @@
     </div>
 
 </main>
+
 
 <footer class="music-footer">
     <div class="footer-container">
