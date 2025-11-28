@@ -374,6 +374,267 @@ body {
   }
 }
 
-.container{
-    padding: 0px 15px 0px 15px;
+
+/* =========================
+   ABOUT PAGE - CONTENT AREA
+   ========================= */
+
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px 50px;
+    background: linear-gradient(135deg, #ffffff, #f2f2f2);
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    line-height: 1.9;
+}
+
+/* Heading */
+.container h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.container h2::after {
+    content: "";
+    width: 90px;
+    height: 4px;
+    background: linear-gradient(to right, #ff4b2b, #ff9068);
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+/* Paragraph text */
+.container p {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* Highlighted names inside bold tags */
+.container bold {
+    font-weight: 700;
+    color: #000;
+}
+
+/* Soft hover effect */
+.container:hover {
+    transform: translateY(-4px);
+    transition: 0.4s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px 20px;
+        margin: 30px 15px;
+    }
+
+    .container h2 {
+        font-size: 2rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+}
+
+/* MEMBERS SECTION STYLING */
+
+.members-container {
+    padding: 60px 5%;
+    background: linear-gradient(to right, #f2f2f2, #e6e6e6);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* Grid layout */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+/* Individual card */
+.member-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.member-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Image style */
+.member-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #222;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+}
+
+/* Image glow on hover */
+.member-card:hover img {
+    border-color: black;
+}
+
+/* Name */
+.member-card h3 {
+    font-size: 1.3rem;
+    margin: 10px 0 5px;
+    color: #222;
+    font-weight: 600;
+}
+
+/* Role */
+.member-card p {
+    font-size: 0.95rem;
+    color: #777;
+    letter-spacing: 0.5px;
+}
+
+/* Subtle background accent */
+.member-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,0,0,0.03), transparent 60%);
+    z-index: 0;
+}
+
+.member-card * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive improvement */
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .member-card img {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* =========================
+   EVENTS SECTION STYLING
+   ========================= */
+
+.events {
+    padding: 60px 6%;
+    background: linear-gradient(to right, #f5f5f5, #e0e0e0);
+}
+
+.events h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 40px;
+    color: #222;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.events h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: black;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+/* Event cards layout */
+.event-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Soft accent strip */
+.event-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, black, #ff9068);
+}
+
+/* Hover animation */
+.event-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Event Title */
+.event-card h3 {
+    font-size: 1.4rem;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+/* Event details */
+.event-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 6px 0;
+}
+
+/* Responsive behavior */
+@media (min-width: 768px) {
+    .events {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .events h2 {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1100px) {
+    .events {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .events h2 {
+        grid-column: span 3;
+    }
 }
